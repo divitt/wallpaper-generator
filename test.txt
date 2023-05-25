@@ -1,0 +1,77 @@
+  //Creating Frame
+  frame = figma.createFrame()
+  frame.resize(720, 1260)
+  
+  //Button
+  but = figma.createComponent();
+  but.resize(250,80)
+  but.x=235
+  but.y=1100
+  but.cornerRadius = 30;
+  frame.appendChild(but)
+  
+  //Text
+  await figma.loadFontAsync({ family: "Inter", style: "Regular" })
+  label = figma.createText()
+  label.name = "Button"
+  label.characters = "Button"
+  label.fontSize = 40
+  but.appendChild(label)
+  label.textAlignHorizontal = "CENTER"
+  label.textAlignVertical = "CENTER"
+  label.resize(but.width, but.height)
+  
+  //Logintext
+  logintext= figma.createText()
+  logintext.name = "Text"
+  logintext.characters = "Login"
+  logintext.fontSize = 80
+  logintext.textAlignHorizontal = "CENTER"
+  logintext.textAlignVertical = "CENTER"
+  logintext.x = 250
+  logintext.y = 260
+  frame.appendChild(logintext)
+
+  const re = figma.createRectangle();
+  re.name = "Rectangle";
+  re.resize(600, 100);
+  re.fills = [{ type: 'SOLID', color: { r: 1, g: 1, b: 1 } }];
+  re.strokes = [{ type: 'SOLID', color: { r: 0, g: 0, b: 0 } }];
+  re.strokeWeight = 1;
+  re.cornerRadius = 4;
+  re.x = 50;
+  re.y = 450;
+  frame.appendChild(re);
+
+  const text = figma.createText();
+  text.name = "Username";
+  text.characters = "Username";
+  text.fontSize = 40;
+  text.x = re.x + 8;
+  text.y = re.y + (re.height / 2) - (text.fontSize / 2);
+  frame.appendChild(text);
+
+  const re2 = figma.createRectangle();
+  re2.name = "Rectangle";
+  re2.resize(600, 100);
+  re2.fills = [{ type: 'SOLID', color: { r: 1, g: 1, b: 1 } }];
+  re2.strokes = [{ type: 'SOLID', color: { r: 0, g: 0, b: 0 } }];
+  re2.strokeWeight = 1;
+  re2.cornerRadius = 4;
+  re2.x = 50;
+  re2.y = 600;
+  frame.appendChild(re2);
+
+
+  const text2 = figma.createText();
+  text2.name = "Password";
+  text2.characters = "Password";
+  text2.fontSize = 40;
+  text2.x = re2.x + 8;
+  text2.y = re2.y + (re2.height / 2) - (text2.fontSize / 2);
+  frame.appendChild(text2);
+
+
+  Navbar 
+  Appbar
+  
